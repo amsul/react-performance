@@ -1,0 +1,49 @@
+{
+  "name": "react-performance",
+  "version": "0.0.1",
+  "description": "HOCs to help debug component render performance",
+  "repository": "https://github.com/amsul/react-performance",
+  "author": "Amsul <reach@amsul.ca>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist/ && yarn build:native && yarn build:rollup && yarn build:examples",
+    "build:examples": "cp -a dist/. examples/src/dist/",
+    "build:native": "cp -a lib/. dist/ && mv dist/index.js dist/react-performance.native.js",
+    "build:rollup": "rollup -c",
+    "develop": "watch 'yarn build' lib/.",
+    "prepublish": "yarn build"
+  },
+  "files": [
+    "dist/**",
+    "lib/**"
+  ],
+  "main": "dist/react-performance.umd.js",
+  "module": "dist/react-performance.js",
+  "jsnext:main": "dist/react-performance.js",
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.13.0",
+    "eslint-plugin-flowtype": "^2.40.1",
+    "eslint-plugin-react": "^7.5.1",
+    "flow-bin": "^0.61.0",
+    "flow-typed": "^2.2.3",
+    "rollup": "^0.52.1",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-flow": "^1.1.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "watch": "^1.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-native": ">=0.50.0"
+  }
+}

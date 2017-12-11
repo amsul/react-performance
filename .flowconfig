@@ -1,0 +1,17 @@
+[ignore]
+
+; Ignore the dev files
+.*/dist/.*
+.*/examples/.*
+
+; Temporary since Flow is being whiny
+.*/node_modules/react-native/.*
+
+[include]
+
+[libs]
+
+[options]
+
+[version]
+^0.61.0

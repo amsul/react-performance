@@ -1,0 +1,15 @@
+# Global
+#
+*.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build
+#
+dist/
