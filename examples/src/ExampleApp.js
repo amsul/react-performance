@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { measure } from './dist/react-performance'
+import ReactPerformance from './dist/react-performance'
 
 class CustomComponent extends React.Component {
   render() {
@@ -46,13 +46,13 @@ class AnotherCustomComponent extends React.Component {
   }
 }
 
-const MeasuredComponent = measure({
+const MeasuredComponent = ReactPerformance.measure({
   isCollapsed: false,
   getId: 'example',
   Component: CustomComponent,
 })
 
-const AnotherMeasuredComponent = measure({
+const AnotherMeasuredComponent = ReactPerformance.measure({
   isCollapsed: false,
   getId: 'example-2',
   Component: AnotherCustomComponent,
@@ -67,7 +67,6 @@ export default class ExampleApp extends React.Component {
       <React.Fragment>
         <MeasuredComponent
           {...this.props}
-          ref={node => this.measuredComponent = node}
           useful={this.state.useful}
           onPressStartStop={() => this.onPressStartStop()}
           onPressWasted={() => this.setState({ wasted: !this.state.wasted })}
@@ -76,7 +75,6 @@ export default class ExampleApp extends React.Component {
         <Br /><Br /><Br />
         <AnotherMeasuredComponent
           {...this.props}
-          ref={node => this.measuredComponent = node}
           useful={this.state.useful}
           onPressStartStop={() => this.onPressStartStop()}
           onPressWasted={() => this.setState({ wasted: !this.state.wasted })}
@@ -89,12 +87,12 @@ export default class ExampleApp extends React.Component {
   isRecording = false
   onPressStartStop() {
     if (this.isRecording) {
-      this.measuredComponent.printRecording()
+      ReactPerformance.printRecording()
       this.isRecording = false
       return
     }
     this.isRecording = true
-    this.measuredComponent.startRecording()
+    ReactPerformance.startRecording()
   }
 
 }
