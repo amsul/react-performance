@@ -34,5 +34,6 @@ export default {
     'react-native',
     'react-redux',
     'redux',
+    'redux-batched-subscribe',
   ],
 }
