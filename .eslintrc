@@ -8,6 +8,9 @@
     "eslint:recommended",
     "plugin:react/recommended",
   ],
+  "globals": {
+    "requestAnimationFrame": true,
+  },
   "rules": {
     "no-console": "off",
     "no-unused-vars": ["error", {
