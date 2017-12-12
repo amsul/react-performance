@@ -17,6 +17,7 @@ export default {
       name: 'ReactPerformance',
       globals: {
         'react': 'React',
+        'react-redux': 'ReactRedux',
       },
     },
   ],
