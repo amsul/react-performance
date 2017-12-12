@@ -19,6 +19,13 @@ class CustomComponent extends React.Component {
         <Button onClick={onPressWasted}>Render wasted</Button>
         <Br /><Br />
         <Button onClick={onPressUseful}>Render useful</Button>
+        {Array
+          .from(Array(40000))
+          .map((_, index) => new Date(2018, 0, index + 1))
+          .filter(date => date.toISOString().includes('2017'))
+          .map(date => ({ date }))
+          .reduce(accumulator => accumulator, 'dope')
+        }
       </View>
     )
   }
