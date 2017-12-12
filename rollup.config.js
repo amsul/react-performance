@@ -30,5 +30,8 @@ export default {
   ],
   external: [
     'react',
+    'react-native',
+    'react-redux',
+    'redux',
   ],
 }

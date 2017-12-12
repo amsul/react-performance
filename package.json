@@ -1,7 +1,7 @@
 {
   "name": "react-performance",
   "version": "0.0.1",
-  "description": "HOCs to help debug component render performance",
+  "description": "Helpers to debug and record component render performance",
   "repository": "https://github.com/amsul/react-performance",
   "author": "Amsul <reach@amsul.ca>",
   "license": "MIT",
@@ -45,5 +45,9 @@
   "peerDependencies": {
     "react": ">=16.0.0",
     "react-native": ">=0.50.0"
+  },
+  "optionalDependencies": {
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
   }
 }
