@@ -55,12 +55,14 @@ class AnotherCustomComponent extends React.Component {
 
 const MeasuredComponent = ReactPerformance.measure({
   isCollapsed: false,
+  isMuted: false,
   getId: 'example',
   Component: CustomComponent,
 })
 
 const AnotherMeasuredComponent = ReactPerformance.measure({
   isCollapsed: false,
+  isMuted: true,
   getId: 'example-2',
   Component: AnotherCustomComponent,
 })
