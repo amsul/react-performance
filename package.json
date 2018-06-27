@@ -1,6 +1,6 @@
 {
   "name": "react-performance",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Helpers to debug and record component render performance",
   "repository": "https://github.com/amsul/react-performance",
   "author": "Amsul <reach@amsul.ca>",
