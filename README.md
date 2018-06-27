@@ -123,6 +123,19 @@ This will log measurements in batches of rerenders caused by updates to the stor
 
 ---
 
+## Contributing & Testing
+
+PRs to improve this library are always welcome, but please make sure to test your changes locally before submitting, and to be consistent with the coding style.
+
+To test your changes you have to do the following:
+
+1. run `yarn develop` in the root directory, to start a watch process that compiles `lib` to `dist`
+1. `cd` into the `examples` folder and run `yarn && yarn start` to start the `react-create-app` server
+
+Now you can test your changes at `http://localhost:3000/`
+
+---
+
 © 2017 [Amsul](http://twitter.com/amsul_)
 
 Licensed under [MIT](http://amsul.ca/MIT)
