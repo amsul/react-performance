@@ -64,6 +64,8 @@ If you use Redux, read the section below on how to [Use with Redux](#use-with-re
   - As a function, it receives `props` and returns a string.
 - `isCollapsed` is `true` by default.
   - This collapses the duration & diff logs when a component renders.
+- `isMuted` is `false` by default.
+  - This mute the single component measure log (to be used with `startRecording` & `printRecording`)
 
 ### Record
 
