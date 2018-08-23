@@ -95,6 +95,8 @@ class MyComponent extends React.Component {/* ... */}
 export default ReactPerformance.connect({
   mapStateToProps,
   mapDispatchToProps,
+  mergeProps,
+  options, // react-redux pass-through options
   getId: 'some_recognizable_identifier',
   Component: MyComponent,
 })
